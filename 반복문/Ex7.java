@@ -1,23 +1,14 @@
 package ch1.반복문;
 
-import java.util.Scanner;
-
-//while문
+//while 문
 public class Ex7 {
 	public static void main(String[] args) {
-		int num = 0, sum = 0;
-		System.out.print("숫자를 입력하세요(예:12345)>");
+		int sum = 0;
+		int i = 0;
 		
-		Scanner scan = new Scanner(System.in);
-		String tmp = scan.nextLine();
-		num = Integer.parseInt(tmp);
-		
-		while (num!=0) {
-			sum += num%10;
-			System.out.printf("sum=%3d num=%d%n", sum, num);
-			
-			num /= 10;
+		while(sum <= 100) {	//sum이 100이하일 때까지
+			System.out.printf("%d - %d%n", i, sum);
+			sum += ++i;	//sum에 i를 더해라
 		}
-		System.out.println("각 자리수의 합:" + sum);
 	}
 }
